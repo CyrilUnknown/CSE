@@ -1,4 +1,4 @@
-print("Hello World")
+print("Hello World!")
 
 # Apparently I'm going to slow, so I will speed up
 # This is a comment
@@ -9,40 +9,44 @@ print("Hello World")
 
 print("Notice what is happening here.")
 print()  # This creates a new line
-print()  #Do you notice the underline here?
+print()  # Do you notice the underline here?
 # Hover over top it to see what is wrong.
 
 # Math
 print(5 + 3)
 print(5 - 3)
 print(4 * 5)
-print(5 / 4)
+print(6 / 5)
+print()
 
+# Semi-advanced math
+print("Figure this out...")
+print(6 // 4)
+print(12 // 3)
+print(9 // 4)  # This will ONLY give me a whole number
+print()
 
+print("Figure this out too...")
+print(6 % 4)
+print(5 % 3)
+print(9 % 4)
 
+# Defining Variables
+car_name = "Wiebe mobile"  # String
+car_type = "Tesla"  # String
+car_cylinders = 16  # Integer
+car_miles_per_gallon = 0.01  # Float
 
-
-
-
-
-
-
-
-
-
-
-
-car_name = "Weibe mobile"  # String
-car_name + "Tesla"  # String
-car_cylinders = 16
-
-
-
-
+print("I have a car called %s. It's pretty nice." % car_name)
+print("It has %d cylinders, but gets %f mpg" % (car_cylinders, car_miles_per_gallon))
 
 # Taking Input
 name = input("What is your name? ")
 print("Hello %s" % name)
 
 age = input("How old are you?")
-print("%s?" you )
+print("%s? You belong in a museum!" % age)
+
+# Recasting
+real_age = int(input("How old are you again? "))
+hidden_age = real_age + 5
