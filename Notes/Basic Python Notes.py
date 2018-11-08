@@ -4,8 +4,7 @@ print("Hello World!")
 # Apparently I'm going to slow, so I will speed up
 # This is a comment
 # This has no effect on the code
-# This is used for a variety of things, such as
-# 1. Making personal notes about my code
+# This is used for a variety of things, such Making personal notes about my code
 # 2. Commenting out code that does not work
 
 print("Notice what is happening here.")
@@ -138,4 +137,4 @@ print(your_grade)
 
 # Random numbers
 import random # This should be on line 1
-print (random.randit(0, 100))
+print (random.randint(0, 100))
