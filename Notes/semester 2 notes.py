@@ -15,3 +15,7 @@ print("%s?? Really???" % age)
 
 colors = ["Yellow", "Green", "Blue", "Orange", "Purple"]
 colors.append("Brown")
+colors.pop(0)
+print(colors)
+print(colors[1])
+print("The list of the length %s")
