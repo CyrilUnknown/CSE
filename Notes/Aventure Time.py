@@ -15,6 +15,4 @@ if answer == "yes":
 SaidTo = input("Would you like to buy a pistol its 25 dollars?")
 if answer == "yes":
     money_total -= 25
-    print("You have arrived at the bank")
-if answer =="yes":
-    SaidTo = input("You have 75 dollars left do you want to go to work for money")
+    SaidTo = input("You have 75 dollars left do you want to go to work for money?")
