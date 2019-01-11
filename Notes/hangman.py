@@ -1,2 +1,2 @@
-the_list = ["Vapor", "Edison", "Wonder", "Epson", "Configue", "Adventure",
+The_list = ["Vapor", "Edison", "Wonder", "Epson", "Configue", "Adventure",
             "Fjord", "Master", "Waves", "Durag"]
