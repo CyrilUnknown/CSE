@@ -10,9 +10,11 @@ answer = input("Do you want to go into the city of oz?")
 if answer == "yes":
     print("You have made it into the city there are lots of things here")
 SaidTo =  input("Would you like to go to the gunshop?")
-if answer == "yes":
+if SaidTo == "no":
+    SaidTo = input("Ok would you like to go to work?")
+elif SaidTo == "yes":
     print("There are lot of guns!")
 SaidTo = input("Would you like to buy a pistol its 25 dollars?")
-if answer == "yes":
+if SaidTo == "yes":
     money_total -= 25
     SaidTo = input("You have 75 dollars left do you want to go to work for money?")

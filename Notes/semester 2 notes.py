@@ -1,3 +1,8 @@
+import string
+print(list(string.ascii_letters))
+print(string.punctuation)
+print(string.digits)
+# print(string.printable)
 print("Hello World")
 # I love you guys hahahaha.
 
@@ -19,3 +24,4 @@ colors.pop(0)
 print(colors)
 print(colors[1])
 print("The list of the length %s")
+
