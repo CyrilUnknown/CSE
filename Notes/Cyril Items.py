@@ -48,6 +48,12 @@ class Bat(Weapon):
                 self.swing = False
 
 
+class KatanaSword(Weapon):
+    def __init__(self, name, damage):
+        super(KatanaSword, self).__init__(name, damage)
+        self.swing = True
+
+
 class Consumable(Item):
     def __init__(self, name):
         super(Consumable, self).__init__(name)
@@ -73,6 +79,7 @@ class Apple(Consumable):
             if self.durability <= 0:
                 self.eat = False
 
+
 class Drink(Consumable):
     def __init__(self, name):
         super(Drink, self).__init__(name)
@@ -88,6 +95,19 @@ class Water(Drink):
     def __init__(self, name):
         super(Water, self).__init__(name)
         self.durability = 6
+
+
+class Pizza(Consumable):
+    def __init__(self, name):
+        super(Pizza, self).__init__(name)
+        self.durability = 4
+        self.eat = True
+
+    def eat(self):
+        if self.eat:
+            self.durability -= 1
+            if self.durability <= 0:
+                self.eat = False
 
 
 class Vehicle(object):
@@ -111,13 +131,11 @@ class Viper(Car):
         super(Viper, self).__init__("Viper")
 
 
-class lamborghini(Car):
+class Lamborghini(Car):
     def __init__(self, name):
-        super(lamborghini, self).__init__("lamborghini")
+        super(Lamborghini, self).__init__("Lamborghini")
 
 
 class Van(Car):
     def __init__(self, name):
         super(Van, self).__init__("Van")
-
-

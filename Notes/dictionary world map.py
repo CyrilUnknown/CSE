@@ -24,7 +24,7 @@ world_map = {
         'NAME': "The Darkroom",
         'DESCRIPTION': "A room full of darkness",
         'PATHS': {
-            'WEST': 'DARKROOM'
+            'EAST': 'JOHNS_INCREDIBLE'
         }
     },
     'MAZE': {
@@ -38,7 +38,7 @@ world_map = {
         'NAME': "FazeRoom",
         'DESCRIPTION': "Room that you can go through things",
         'PATHS': {
-            'NORTHWEST': 'FazeRoom'
+            'EAST': 'MAZE'
         }
     },
     'LIGHT ROOM': {
@@ -68,7 +68,29 @@ world_map = {
         'Paths': {
             'North'
         }
-    }
+    },
+    'My room': {
+        'NAME': "My room",
+        'DESCRIPTION': "Hangout Here",
+        'Paths': {
+            'Southwest'
+        }
+    },
+    'Computer room': {
+        'NAME': "Computer room",
+        'DESCRIPTION': "Search thing up or play games here",
+        'Paths': {
+            'Southeast'
+        }
+    },
+    'Trophy room': {
+        'NAME': "Trophy room",
+        'DESCRIPTION': "Store metals and trophy's here",
+        'Paths': {
+
+        }
+    },
+    ''
 }
 # Other Variables
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
