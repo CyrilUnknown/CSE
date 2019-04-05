@@ -36,15 +36,19 @@ class Player(object):
 # These are the instances of the rooms (Instantiation)
 
 
-R19A = Room("Mr. William's Room", "INSERT DESCRIPTION HERE")
-parking_Lot = Room("The Parking Lot", None, R19A)
-R19A.north = parking_Lot
-
-# Option 2 - Use strings, but more difficult controller
-
-# R19A = Room("Mr. Wiebe's Room")
-# parking_Lot = Room("The Parking Lot", None, "R19A")
-# JOHNS_INCREDIBLE = Room("Johns Incredible", "There are lots of things to do here", None,)
+R19A = Room("Mr.Wiebe's room", "This is the room that you are in", None, "PARKING_LOT", None, None, None, None)
+parking_lot = Room("The Parking Lot", "There are a few cars parked here", "john", R19A)
+JOHNS_INCREDIBLE = Room("Johns incredible pizza for kids","There are lots of things to do here", None, "JOHNS_INCREDIBLE", None, None, None, None)
+DARKROOM = Room("The Darkroom", "A room full of darkness", None, "DARKROOM", None, None, None, None)
+MAZE = Room("The Maze room", "Don't get lost in the Maze", None, "Maze", None, None, None, None)
+FAZE_ROOM = Room("FAZE_ROOM", "Room that you can go through things", None, "FAZE_ROOM", None, None, None, None)
+LIGHT_ROOM = Room("LIGHT_ROOM", "Search for people", None, "LIGHT_ROOM", None, None, None, None)
+AIRPORT = Room("AIRPORT", "Go visit somewhere else", None, "AIRPORT", None, None, None, None)
+GYM = Room("GYM", "Workout Here", None, "GYM", None, None, None, None)
+HALLWAY = Room("HALLWAY", "Walk places here", None, "HALLWAY", None, None, None, None)
+MY_ROOM = Room("MY_ROOM", "Hangout Here", None, "MY_ROOM", None, None, None, None)
+COMPUTER_ROOM = Room("COMPUTER_ROOM", "Search thing up or play games here", None, "COMPUTER_ROOM", None, None, None, None)
+TROPHY_ROOM = Room()
 
 player = Player(R19A)
 
