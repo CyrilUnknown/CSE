@@ -94,7 +94,7 @@ world_map = {
             'EAST': "MY_ROOM"
         }
     },
-    'Trophy room': {
+    'TROPHY_ROOM': {
         'NAME': "Trophy room",
         'DESCRIPTION': "Store metals and trophy's here",
         'PATHS': {
@@ -102,7 +102,7 @@ world_map = {
             'SOUTH': "COMPUTER_ROOM"
         }
     },
-    'Garage': {
+    'GARAGE': {
         'NAME': "Garage",
         'DESCRIPTION': "Put your car's in here",
         'PATHS': {
@@ -110,7 +110,7 @@ world_map = {
             'EAST': "TROPHY_ROOM"
         }
     },
-    'Living_Room': {
+    'LIVING_ROOM': {
         'NAME': "Living room",
         'DESCRIPTION': "You use a living room everyday",
         'PATHS': {

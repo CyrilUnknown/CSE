@@ -11,10 +11,27 @@ class Room(object):
 
 
 class Player(object):
-    def __init__(self, starting_locating):
+    def __init__(self, starting_location):
         self.health = 100
         self.inventory = []
-        self.current_location = starting_locating
+        self.current_location = starting_location
+
+    def move(self, new_location):
+        """This method moves a player to a new location
+
+        :param new_location: The room object that we move to
+        """
+        self.current_location = new_location
+
+    def find_room(self, direction):
+        """This method takes a direction, and finds the variable of the
+        room.
+
+        :param direction: A String (all lowercase), with a cardinal direction
+        :return: A room object if it exists, None if it does not
+        """
+        room_name = getattr(self.current_location, direction)
+        return globals()[room_name]
 
 
 class Vehicle(object):
@@ -29,8 +46,44 @@ class Car(Vehicle):
         self.fuel = 100
 
 
-R19A = Room("Mr. William's Room", "INSERT DESCRIPTION HERE")
+R19A = Room("Mr.Wiebe's room", "This is the room that you are in", None, "parking_lot", None, None, None, None)
+parking_lot = Room("The Parking Lot", "There are a few cars parked here", "JOHNS_INCREDIBLE", 'R19A')
+JOHNS_INCREDIBLE = Room("Johns incredible pizza for kids","There are lots of things to do here", None,
+                        "JOHNS_INCREDIBLE", None, None, None, None)
+DARKROOM = Room("The Dark room", "A room full of darkness", None, "DARKROOM", None, None, None, None)
+MAZE = Room("The Maze room", "Don't get lost in the Maze", None, "Maze", None, None, None, None)
+FAZE_ROOM = Room("Faze room", "Room that you can go through things", None, "FAZE_ROOM", None, None, None, None)
+LIGHT_ROOM = Room("Light room", "Search for people", None, "LIGHT_ROOM", None, None, None, None)
+AIRPORT = Room("Airport", "Go visit somewhere else", None, "AIRPORT", None, None, None, None)
+GYM = Room("Gym", "Workout Here", None, "GYM", None, None, None, None)
+HALLWAY = Room("Hallway", "Walk places here", None, "HALLWAY", None, None, None, None)
+MY_ROOM = Room("MY room", "Hangout Here", None, "MY_ROOM", None, None, None, None)
+COMPUTER_ROOM = Room("Computer room", "Search thing up or play games here", None, "COMPUTER_ROOM", None, None, None,
+                     None)
+TROPHY_ROOM = Room("Trophy room", "Store metals and trophy's here", None, "TROPHY_ROOM", None, None, None, None)
+GARAGE = Room("Garage", "Put your car's in here", None, "Garage", None, None, None, None)
+LIVING_ROOM = Room("Living room", "You use a living room everyday", None, "LIVING_ROOM", None, None, None, None)
 
-parking_Lot = Room("The Parking Lot", None, R19A)
 
-R19A.north = parking_Lot
+player = Player(R19A)
+
+directions = ['north', 'south', 'east', 'west', 'up', 'down']
+
+playing = True
+
+# Controller
+while playing:
+    print(player.current_location.name)
+    print(player.current_location.description)
+
+    command = input(">_")
+    if command.lower() in ['q', 'quit', 'exit']:
+        playing = False
+    elif command in directions:
+        try:
+            next_room = player.find_room(command)
+            player.move(next_room)
+        except KeyError:
+            print("I can't go that way.")
+    else:
+        print("Command not recognized.")
