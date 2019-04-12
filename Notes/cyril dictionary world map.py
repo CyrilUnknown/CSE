@@ -54,7 +54,7 @@ world_map = {
             'SOUTH': "FAZE_ROOM"
         }
     },
-    'AIRPORT': {
+    '': {
         'NAME': "AIRPORT",
         'DESCRIPTION': "Go visit somewhere else",
         'PATHS': {

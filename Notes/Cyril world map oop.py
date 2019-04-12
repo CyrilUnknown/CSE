@@ -47,7 +47,8 @@ AIRPORT = Room("Airport", "Go visit somewhere else", None, "AIRPORT", None, None
 GYM = Room("Gym", "Workout Here", None, "GYM", None, None, None, None)
 HALLWAY = Room("Hallway", "Walk places here", None, "HALLWAY", None, None, None, None)
 MY_ROOM = Room("MY room", "Hangout Here", None, "MY_ROOM", None, None, None, None)
-COMPUTER_ROOM = Room("Computer room", "Search thing up or play games here", None, "COMPUTER_ROOM", None, None, None, None)
+COMPUTER_ROOM = Room("Computer room", "Search thing up or play games here", None, "COMPUTER_ROOM", None, None, None,
+                     None)
 TROPHY_ROOM = Room("Trophy room", "Store metals and trophy's here", None, "TROPHY_ROOM", None, None, None, None)
 GARAGE = Room("Garage", "Put your car's in here", None, "Garage", None, None, None, None)
 LIVING_ROOM = Room("Living room", "You use a living room everyday", None, "LIVING_ROOM", None, None, None, None)
