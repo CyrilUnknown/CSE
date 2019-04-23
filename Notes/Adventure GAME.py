@@ -1,6 +1,6 @@
 class Room(object):
     def __init__(self, name, description="insert description", north=None, west=None, east=None, south=None,
-                 up=None, down=None, item=None):
+                 up=None, down=None):
         self.north = north
         self.west = west
         self.east = east
@@ -9,7 +9,7 @@ class Room(object):
         self.down = down
         self.name = name
         self.description = description
-        self.item = item
+        self.item = []
 
 
 class Player(object):
@@ -202,24 +202,31 @@ class AudiR8(Car):
         super(AudiR8, self).__init__("Audi R8")
 
 
-R19A = Room("Mr.Wiebe's room", "This is the room that you are in", None, "parking_lot", None, None, None, None)
+R19A = Room("Mr.Wiebe's room", "This is the room that you are in", None, "parking_lot", None, None, None, None,
+            )
 parking_lot = Room("The Parking Lot", "There are a few cars parked here", "JOHNS_INCREDIBLE", 'R19A', None, None, None,
                    None, AudiR8())
 JOHNS_INCREDIBLE = Room("Johns incredible pizza for kids","There are lots of things to do here", None,
-                        None, "DARKROOM", "R19A", None, None)
+                        None, "DARKROOM", "R19A", None, None, Pizza("Pepperoni Pizza"))
 DARKROOM = Room("The Dark room", "A room full of darkness", "MAZE", "JOHNS_INCREDIBLE", None, None, None, None)
 MAZE = Room("The Maze room", "Don't get lost in the Maze", None, None, "FAZE_ROOM", "DARK_ROOM", None, None)
 FAZE_ROOM = Room("Faze room", "Room that you can go through things", "LIGHT_ROOM", "MAZE", None, None)
 LIGHT_ROOM = Room("Light room", "Search for people", None, "AIRPORT", None, "FAZE_ROOM", None, None)
-AIRPORT = Room("Airport", "Go visit somewhere else", "GYM", None, "LIGHT_ROOM", None, None, None)
-GYM = Room("Gym", "Workout Here", None, "HALLWAY", None, "AIRPORT", None, None)
-HALLWAY = Room("Hallway", "Walk places here", None, None, "GYM", "MY_ROOM", None, None)
-MY_ROOM = Room("MY room", "Hangout Here", "HALLWAY", "COMPUTER_ROOM", None, None, None, None)
+AIRPORT = Room("Airport", "Go visit somewhere else", "GYM", None, "LIGHT_ROOM", None, None, None,
+               AppleJuice("Apple Juice"))
+GYM = Room("Gym", "Workout Here", None, "HALLWAY", None, "AIRPORT", None, None, Soda("Mountain Dew Soda"))
+HALLWAY = Room("Hallway", "Walk places here", None, None, "GYM", "MY_ROOM", None, None,
+               Bat("Baseball Bat", 30))
+MY_ROOM = Room("MY room", "Hangout Here", "HALLWAY", "COMPUTER_ROOM", None, None, None, None,
+               KatanaSword("Katana Sword", 100,))
 COMPUTER_ROOM = Room("Computer room", "Search thing up or play games here", "TROPHY_ROOM", None, "MY_ROOM", None, None,
                      None)
-TROPHY_ROOM = Room("Trophy room", "Store metals and trophy's here", None, "GARAGE", None, "COMPUTER_ROOM", None, None)
-GARAGE = Room("Garage", "Put your car's in here", None, None, "TROPHY_ROOM", "LIVING_ROOM", None, None)
-LIVING_ROOM = Room("Living room", "You use a living room everyday", "GARAGE", None, None, None, None, None)
+TROPHY_ROOM = Room("Trophy room", "Store metals and trophy's here", None, "GARAGE", None, "COMPUTER_ROOM", None, None,
+                   ShotGun("ShotGun", 60))
+GARAGE = Room("Garage", "Put your car's in here", None, None, "TROPHY_ROOM", "LIVING_ROOM", None, None,
+              [Lamborghini, Viper, Van]())
+LIVING_ROOM = Room("Living room", "You use a living room everyday", "GARAGE", None, None, None, None, None,
+                   Handgun("Handgun", 25))
 
 
 player = Player(R19A)
