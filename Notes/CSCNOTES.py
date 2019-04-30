@@ -37,7 +37,14 @@ def is_second_num_even(num: str):
 #           old_number = row[0]
 #           # print(int(old_number) + 1)
 #           print(old_number)
+#   print("OK")
 
+
+def reverse_it(string):
+    return string[::-1]
+
+
+print(reverse_it("dlroW olleH"))
 
 with open("Book1.csv", 'r') as old_csv:
     with open("MyNewBestFile", "w", newline='') as new_csv:

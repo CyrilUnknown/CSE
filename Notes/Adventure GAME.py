@@ -264,5 +264,6 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way.")
-    else:
         print("Command not recognized.")
+    else:
+        pass
