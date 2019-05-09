@@ -202,7 +202,7 @@ class AudiR8(Car):
         super(AudiR8, self).__init__("Audi R8")
 
 
-R19A = Room("Mr.Wiebe's room", "This is the room that you are in", None, "parking_lot", None, None, None, None,
+R19A = Room("Cyril room", "This is the room that you are in", None, "parking_lot", None, None, None, None,
             )
 parking_lot = Room("The Parking Lot", "There are a few cars parked here", "JOHNS_INCREDIBLE", 'R19A', None, None, None,
                    None, )
@@ -237,7 +237,7 @@ Gun = ShotGun("Remington 870", 60)
 TROPHY_ROOM.item.append(Gun)
 Weapon = KatanaSword("Katana Sword", 100)
 MY_ROOM.item.append(Weapon)
-Weapon = Bat("Baseball Bat", 45)
+Melee_Weapon = Bat("Baseball Bat", 45)
 Consumable = AppleJuice("AppleJuice")
 AIRPORT.item.append(Consumable)
 Consumable = Pizza("Pepperoni Pizza")
@@ -255,7 +255,7 @@ while playing:
     print(player.current_location.name)
     print(player.current_location.description)
 
-    command = input(">_")
+    command = input(">>")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command in directions:

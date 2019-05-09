@@ -1,9 +1,11 @@
-test_num = "4508878827358837"
+import csv
+test_num = "4556737586899855"
 number_list1 = list(test_num)
 print(number_list1)
 
 
 def validate(num: str):
+    number_list1 = list(num)
     if len(number_list1) is not 16:
         print("It doesn't pass")
         return False
@@ -20,3 +22,15 @@ def validate(num: str):
 
 
 print(validate(test_num))
+
+with open("Book1.csv", 'r') as old_csv:
+    with open("MyNewBestFile.csv", 'w', newline='') as new_csv:
+        reader = csv.reader(old_csv)
+        writer = csv.writer(new_csv)
+        print("Processing...")
+
+        for row in reader:
+            old_number = row[0]
+            if validate(old_number):
+                writer.writerow(row)
+        print("OK I'M DONE")
