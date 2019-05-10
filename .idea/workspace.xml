@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Notes/Sale Info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="275">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -60,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes/Sales Records.csv">
           <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="7150">
+            <state relative-caret-position="535">
               <caret line="286" column="29" selection-start-line="286" selection-start-column="29" selection-end-line="286" selection-end-column="29" />
             </state>
           </provider>
@@ -146,6 +146,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,7 +163,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,12 +366,13 @@
       <workItem from="1557175517769" duration="3172000" />
       <workItem from="1557262108191" duration="1966000" />
       <workItem from="1557348215546" duration="3335000" />
-      <workItem from="1557434650311" duration="2904000" />
+      <workItem from="1557434650311" duration="2917000" />
+      <workItem from="1557522083199" duration="1743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35957000" />
+    <option name="totallyTimeSpent" value="37713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -379,10 +380,10 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.3491471" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.35287845" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3066089" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3066089" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -412,7 +413,7 @@
     <SUITE FILE_PATH="coverage/CSE$Cyril_Validator.coverage" NAME="Cyril.Validator Coverage Results" MODIFIED="1557177430361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
     <SUITE FILE_PATH="coverage/CSE$cyril_hangman.coverage" NAME="cyril.hangman Coverage Results" MODIFIED="1556826996720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
     <SUITE FILE_PATH="coverage/CSE$Adventure_GAME.coverage" NAME="Adventure GAME Coverage Results" MODIFIED="1557350025524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
-    <SUITE FILE_PATH="coverage/CSE$Sale_Info.coverage" NAME="Sale Info Coverage Results" MODIFIED="1557436562810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
+    <SUITE FILE_PATH="coverage/CSE$Sale_Info.coverage" NAME="Sale Info Coverage Results" MODIFIED="1557523210239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Notes/semester 2 notes.py">
@@ -551,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/Sales Records.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="7150">
-          <caret line="286" column="29" selection-start-line="286" selection-start-column="29" selection-end-line="286" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Notes/Cyril.Validator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -572,10 +566,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Notes/Sales Records.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="535">
+          <caret line="286" column="29" selection-start-line="286" selection-start-column="29" selection-end-line="286" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Notes/Sale Info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="275">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

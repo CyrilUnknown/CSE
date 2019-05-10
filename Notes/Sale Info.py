@@ -8,29 +8,4 @@ with open("Sales Records.csv", 'r') as old_csv:
         if row[2] == "Fruits":
             num = float(old_number)
             total += num
-            print(old_number)
-        if row[2] == "+":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
-        if row[2] == "Fruits":
-            num = float(old_number)
+            # print(old_number)
