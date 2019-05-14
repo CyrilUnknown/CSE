@@ -42,26 +42,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes/CSVNOTES.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="72">
               <caret line="3" column="23" selection-start-line="3" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes/Sale Info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            <state relative-caret-position="1597">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Notes/Sales Records.csv">
           <provider editor-type-id="LargeFileEditor">
             <state relative-caret-position="168">
-              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
             </state>
           </provider>
           <provider selected="true" editor-type-id="csv-data-editor">
@@ -85,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes/Cyril.Validator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="528">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -94,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes/Adventure GAME.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="5424">
+              <caret line="226" column="28" lean-forward="true" selection-start-line="226" selection-start-column="28" selection-end-line="226" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -144,9 +144,9 @@
         <option value="$PROJECT_DIR$/Notes/MyNewFile" />
         <option value="$PROJECT_DIR$/Notes/CSCNOTES.py" />
         <option value="$PROJECT_DIR$/Notes/Cyril.Validator.py" />
-        <option value="$PROJECT_DIR$/Notes/Adventure GAME.py" />
         <option value="$PROJECT_DIR$/Notes/Salen Info.py" />
         <option value="$PROJECT_DIR$/Notes/CSVNOTES.py" />
+        <option value="$PROJECT_DIR$/Notes/Adventure GAME.py" />
         <option value="$PROJECT_DIR$/Notes/Sale Info.py" />
       </list>
     </option>
@@ -384,12 +384,13 @@
       <workItem from="1557348215546" duration="3335000" />
       <workItem from="1557434650311" duration="2917000" />
       <workItem from="1557522083199" duration="1743000" />
-      <workItem from="1557780459741" duration="2888000" />
+      <workItem from="1557780459741" duration="3037000" />
+      <workItem from="1557868823696" duration="1057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40601000" />
+    <option name="totallyTimeSpent" value="41807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -397,7 +398,7 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.16257995" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.1641791" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3066089" />
@@ -429,8 +430,8 @@
     <SUITE FILE_PATH="coverage/CSE$CSCNOTES.coverage" NAME="CSCNOTES Coverage Results" MODIFIED="1557176825117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
     <SUITE FILE_PATH="coverage/CSE$Cyril_Validator.coverage" NAME="Cyril.Validator Coverage Results" MODIFIED="1557177430361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
     <SUITE FILE_PATH="coverage/CSE$cyril_hangman.coverage" NAME="cyril.hangman Coverage Results" MODIFIED="1556826996720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
-    <SUITE FILE_PATH="coverage/CSE$Adventure_GAME.coverage" NAME="Adventure GAME Coverage Results" MODIFIED="1557350025524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
-    <SUITE FILE_PATH="coverage/CSE$Sale_Info.coverage" NAME="Sale Info Coverage Results" MODIFIED="1557783046090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
+    <SUITE FILE_PATH="coverage/CSE$Adventure_GAME.coverage" NAME="Adventure GAME Coverage Results" MODIFIED="1557869251890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
+    <SUITE FILE_PATH="coverage/CSE$Sale_Info.coverage" NAME="Sale Info Coverage Results" MODIFIED="1557869606547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Notes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Notes/semester 2 notes.py">
@@ -556,20 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/CSVNOTES.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="23" selection-start-line="3" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/Adventure GAME.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Notes/Cyril Items.py___jb_tmp___">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -579,17 +566,38 @@
     <entry file="file://$PROJECT_DIR$/Notes/MyNewBestFile.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Notes/CSVNOTES.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="23" selection-start-line="3" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Notes/Cyril.Validator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="528">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Notes/Adventure GAME.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5424">
+          <caret line="226" column="28" lean-forward="true" selection-start-line="226" selection-start-column="28" selection-end-line="226" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Notes/Sale Info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1597">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Notes/Sales Records.csv">
       <provider editor-type-id="LargeFileEditor">
         <state relative-caret-position="168">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="csv-data-editor">
@@ -606,13 +614,6 @@
               </data>
             </csv-format>
           </format>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/Sale Info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
         </state>
       </provider>
     </entry>

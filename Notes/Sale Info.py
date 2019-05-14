@@ -45,17 +45,24 @@ with open("Sales Records.csv", 'r') as old_csv:
             baby_food_total += num
         elif row[2] == "Cereal":
             cereal_total += num
-Items = [Fruits, Clothes, Meat, Beverages, Office Supplies, Cosmetics,
-         Snack, Personal Care, Household, Vegetables, Baby Food, Cereal]
-print(fruit_total)
-print(clothes_total)
-print(meat_total)
-print(beverages_total)
-print(office_supplies_total)
-print(cosmetics_total)
-print(snack_total)
-print(personal_care_total)
-print(household_total)
-print(vegetables_total)
-print(baby_food_total)
-print(cereal_total)
+Items = ["Fruits", "Clothes", "Meat", "Beverages", "Office Supplies", "Cosmetics",
+         "Snack", "Personal Care", "Household", "Vegetables", "Baby Food", "Cereal"]
+item_list = [fruit_total, clothes_total, meat_total, beverages_total, office_supplies_total,
+             cosmetics_total, snack_total, personal_care_total, household_total, vegetables_total,
+             baby_food_total, cereal_total]
+highest_profit = max(item_list)
+highest_index = item_list.index(highest_profit)
+print(Items[highest_index])
+print(highest_profit)
+print("Fruit --> %f" % fruit_total)
+print("Clothes --> %f" % clothes_total)
+print("Meat --> %f" % meat_total)
+print("Beverages --> %f" % beverages_total)
+print("Office Supplies --> %f" % office_supplies_total)
+print("Cosmetics --> %f" % cosmetics_total)
+print("Snack --> %f" % snack_total)
+print("Personal Care --> %f" % personal_care_total)
+print("Household --> %f" % household_total)
+print("Vegetables --> %f" % vegetables_total)
+print("Baby Food --> %f" % baby_food_total)
+print("Cereal --> %f" % cereal_total)

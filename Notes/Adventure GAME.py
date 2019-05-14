@@ -86,9 +86,9 @@ class Bat(Weapon):
                 self.swing = False
 
 
-class KatanaSword(Weapon):
+class Katanasword(Weapon):
     def __init__(self, name, damage):
-        super(KatanaSword, self).__init__(name, damage)
+        super(Katanasword, self).__init__(name, damage)
         self.swing = True
 
 
@@ -212,21 +212,16 @@ DARKROOM = Room("The Dark room", "A room full of darkness", "MAZE", "JOHNS_INCRE
 MAZE = Room("The Maze room", "Don't get lost in the Maze", None, None, "FAZE_ROOM", "DARK_ROOM", None, None)
 FAZE_ROOM = Room("Faze room", "Room that you can go through things", "LIGHT_ROOM", "MAZE", None, None)
 LIGHT_ROOM = Room("Light room", "Search for people", None, "AIRPORT", None, "FAZE_ROOM", None, None)
-AIRPORT = Room("Airport", "Go visit somewhere else", "GYM", None, "LIGHT_ROOM", None, None, None,
-               )
+AIRPORT = Room("Airport", "Go visit somewhere else", "GYM", None, "LIGHT_ROOM", None, None, None)
 GYM = Room("Gym", "Workout Here", None, "HALLWAY", None, "AIRPORT", None, None)
-HALLWAY = Room("Hallway", "Walk places here", None, None, "GYM", "MY_ROOM", None, None,
-               )
-MY_ROOM = Room("MY room", "Hangout Here", "HALLWAY", "COMPUTER_ROOM", None, None, None, None,
-               )
+HALLWAY = Room("Hallway", "Walk places here", None, None, "GYM", "MY_ROOM", None, None)
+MY_ROOM = Room("MY room", "Hangout Here", "HALLWAY", "COMPUTER_ROOM", None, None, None, None)
 COMPUTER_ROOM = Room("Computer room", "Search thing up or play games here", "TROPHY_ROOM", None, "MY_ROOM", None, None,
                      None)
 TROPHY_ROOM = Room("Trophy room", "Store metals and trophy's here", None, "GARAGE", None, "COMPUTER_ROOM", None, None,
                    )
-GARAGE = Room("Garage", "Put your car's in here", None, None, "TROPHY_ROOM", "LIVING_ROOM", None, None,
-              )
-LIVING_ROOM = Room("Living room", "You use a living room everyday", "GARAGE", None, None, None, None, None,
-                   )
+GARAGE = Room("Garage", "Put your car's in here", None, None, "TROPHY_ROOM", "LIVING_ROOM", None, None)
+LIVING_ROOM = Room("Living room", "You use a living room everyday", "GARAGE", None, None, None, None, None)
 Car = AudiR8
 parking_lot.item.append(Car)
 Gun = Handgun("Handgun", 25)
@@ -235,7 +230,7 @@ Car = [Lamborghini, Viper, Van]
 GARAGE.item.append(Car)
 Gun = ShotGun("Remington 870", 60)
 TROPHY_ROOM.item.append(Gun)
-Weapon = KatanaSword("Katana Sword", 100)
+Weapon = Katanasword("Katana Sword", 100)
 MY_ROOM.item.append(Weapon)
 Melee_Weapon = Bat("Baseball Bat", 45)
 Consumable = AppleJuice("AppleJuice")
