@@ -47,6 +47,13 @@ class Weapon(Item):
         self.damage = damage
 
 
+class Enemy(object):
+    def __init__(self, starting_location):
+        self.health = 150
+        self.inventory = []
+        self.current_location = starting_location
+
+
 class Knife(Weapon):
     def __init__(self, name, damage):
         super(Knife, self).__init__(name, damage)
@@ -89,6 +96,12 @@ class Bat(Weapon):
 class Katanasword(Weapon):
     def __init__(self, name, damage):
         super(Katanasword, self).__init__(name, damage)
+        self.swing = True
+
+
+class Flashlight(Weapon):
+    def __init__(self, name, damage):
+        super(Flashlight, self).__init__(name, damage)
         self.swing = True
 
 
@@ -202,14 +215,15 @@ class AudiR8(Car):
         super(AudiR8, self).__init__("Audi R8")
 
 
-R19A = Room("Cyril room", "This is the room that you are in", None, "parking_lot", None, None, None, None,
+R19A = Room("You are in the mansion", "There is an zombie here", None, "parking_lot", None, None, None, None,
             )
-parking_lot = Room("The Parking Lot", "There are a few cars parked here", "JOHNS_INCREDIBLE", 'R19A', None, None, None,
+parking_lot = Room("This is the parking lot of the mansion", "There are a few cars parked here", "JOHNS_INCREDIBLE",
+                   'R19A', None, None, None,
                    None, )
-JOHNS_INCREDIBLE = Room("Johns incredible pizza for kids", "There are lots of things to do here", None,
+JOHNS_INCREDIBLE = Room("You are at John's Incredible Pizza", "There are zombies at bumper cars", None,
                         None, "DARKROOM", "R19A", None, None)
-DARKROOM = Room("The Dark room", "A room full of darkness", "MAZE", "JOHNS_INCREDIBLE", None, None, None, None)
-MAZE = Room("The Maze room", "Don't get lost in the Maze", None, None, "FAZE_ROOM", "DARK_ROOM", None, None)
+DARKROOM = Room("You are at the Dark room", "I can barely see anything here ", "MAZE", "JOHNS_INCREDIBLE", None, None, None, None)
+MAZE = Room("You are at the Maze room", "Don't get lost in the Maze", None, None, "FAZE_ROOM", "DARK_ROOM", None, None)
 FAZE_ROOM = Room("Faze room", "Room that you can go through things", "LIGHT_ROOM", "MAZE", None, None)
 LIGHT_ROOM = Room("Light room", "Search for people", None, "AIRPORT", None, "FAZE_ROOM", None, None)
 AIRPORT = Room("Airport", "Go visit somewhere else", "GYM", None, "LIGHT_ROOM", None, None, None)
@@ -222,24 +236,48 @@ TROPHY_ROOM = Room("Trophy room", "Store metals and trophy's here", None, "GARAG
                    )
 GARAGE = Room("Garage", "Put your car's in here", None, None, "TROPHY_ROOM", "LIVING_ROOM", None, None)
 LIVING_ROOM = Room("Living room", "You use a living room everyday", "GARAGE", None, None, None, None, None)
-Car = AudiR8
+
+Car = AudiR8()
+
 parking_lot.item.append(Car)
+
 Gun = Handgun("Handgun", 25)
+
 LIVING_ROOM.item.append(Gun)
+
 Car = [Lamborghini, Viper, Van]
+
 GARAGE.item.append(Car)
+
 Gun = ShotGun("Remington 870", 60)
+
 TROPHY_ROOM.item.append(Gun)
-Weapon = Katanasword("Katana Sword", 100)
+
+Weapon2 = Katanasword("Katana Sword", 100)
+
 MY_ROOM.item.append(Weapon)
+
 Melee_Weapon = Bat("Baseball Bat", 45)
-Consumable = AppleJuice("AppleJuice")
+
+Consumable2 = AppleJuice("AppleJuice")
+
 AIRPORT.item.append(Consumable)
-Consumable = Pizza("Pepperoni Pizza")
+
+Consumable3 = Pizza("Pepperoni Pizza")
+
 JOHNS_INCREDIBLE.item.append(Consumable)
+
 player = Player(R19A)
-Consumable = Soda("Mountain Dew Soda")
+
+Consumable4 = Soda("Mountain Dew Soda")
+
 GYM.item.append(Consumable)
+
+zombie = Enemy(R19A)
+
+R19A.item.append(Enemy)
+
+Weapon4 = Flashlight("There is a Flashlight by the pizza", 10)
 
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 

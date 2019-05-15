@@ -50,10 +50,12 @@ Items = ["Fruits", "Clothes", "Meat", "Beverages", "Office Supplies", "Cosmetics
 item_list = [fruit_total, clothes_total, meat_total, beverages_total, office_supplies_total,
              cosmetics_total, snack_total, personal_care_total, household_total, vegetables_total,
              baby_food_total, cereal_total]
+
 highest_profit = max(item_list)
 highest_index = item_list.index(highest_profit)
 print(Items[highest_index])
 print(highest_profit)
+
 print("Fruit --> %f" % fruit_total)
 print("Clothes --> %f" % clothes_total)
 print("Meat --> %f" % meat_total)
