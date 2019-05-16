@@ -263,17 +263,17 @@ Melee_Weapon = Bat("Baseball Bat", 45)
 
 Consumable2 = AppleJuice("AppleJuice")
 
-AIRPORT.item.append(Consumable)
+AIRPORT.item.append(Consumable2)
 
 Consumable3 = Pizza("Pepperoni Pizza")
 
-JOHNS_INCREDIBLE.item.append(Consumable)
+JOHNS_INCREDIBLE.item.append(Consumable3)
 
 player = Player(R19A)
 
 Consumable4 = Soda("Mountain Dew Soda")
 
-GYM.item.append(Consumable)
+GYM.item.append(Consumable4)
 
 zombie = Enemy("Zombie", R19A)
 
@@ -315,6 +315,6 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way.")
-        print("Command not recognized.")
+
     else:
-        pass
+        print("Command not recognized.")
