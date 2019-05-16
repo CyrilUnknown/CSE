@@ -10,6 +10,7 @@ class Room(object):
         self.name = name
         self.description = description
         self.item = []
+        self.enemy = []
 
 
 class Player(object):
@@ -48,10 +49,10 @@ class Weapon(Item):
 
 
 class Enemy(object):
-    def __init__(self, starting_location):
+    def __init__(self, name, starting_location):
         self.health = 150
         self.inventory = []
-        self.current_location = starting_location
+        self.name = name
 
 
 class Knife(Weapon):
@@ -222,7 +223,8 @@ parking_lot = Room("This is the parking lot of the mansion", "There are a few ca
                    None, )
 JOHNS_INCREDIBLE = Room("You are at John's Incredible Pizza", "There are zombies at bumper cars", None,
                         None, "DARKROOM", "R19A", None, None)
-DARKROOM = Room("You are at the Dark room", "I can barely see anything here ", "MAZE", "JOHNS_INCREDIBLE", None, None, None, None)
+DARKROOM = Room("You are at the Dark room", "I can barely see anything here ", "MAZE", "JOHNS_INCREDIBLE", None, None,
+                None, None)
 MAZE = Room("You are at the Maze room", "Don't get lost in the Maze", None, None, "FAZE_ROOM", "DARK_ROOM", None, None)
 FAZE_ROOM = Room("Faze room", "Room that you can go through things", "LIGHT_ROOM", "MAZE", None, None)
 LIGHT_ROOM = Room("Light room", "Search for people", None, "AIRPORT", None, "FAZE_ROOM", None, None)
@@ -273,11 +275,18 @@ Consumable4 = Soda("Mountain Dew Soda")
 
 GYM.item.append(Consumable)
 
-zombie = Enemy(R19A)
+zombie = Enemy("Zombie", R19A)
 
-R19A.item.append(Enemy)
+# self.health = 150
+#         self.inventory = []
+#         self.current_location = starting_location
+#         self.name = name
+
+R19A.enemy.append(zombie)
 
 Weapon4 = Flashlight("There is a Flashlight by the pizza", 10)
+
+JOHNS_INCREDIBLE.item.append(Weapon4)
 
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 
@@ -287,7 +296,16 @@ playing = True
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
-
+    if len(player.current_location.item) > 0:
+        print("The following items are in this room:")
+        for item in player.current_location.item:
+            print(item.name)
+            print()
+    if len(player.current_location.enemy) > 0:
+        print("There is a following enemy here:")
+        for enemy in player.current_location.enemy:
+            print(enemy.name)
+            print()
     command = input(">>")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
