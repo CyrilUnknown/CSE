@@ -10,7 +10,7 @@ class Room(object):
         self.name = name
         self.description = description
         self.item = []
-        self.enemy = []
+        self.enemies = []
 
 
 class Player(object):
@@ -45,16 +45,22 @@ class Player(object):
 class Item(object):
     def __init__(self, name):
         self.name = name
+        self.picked_up = False
 
 
 class Weapon(Item):
     def __init__(self, name, damage):
         super(Weapon, self).__init__(name)
         self.damage = damage
+        self.name = name
+
+    def grab(self):
+        player.inventory.append(self)
+        print("You grabbed the %s" % self.name)
 
 
 class Enemy(object):
-    def __init__(self, name, starting_location):
+    def __init__(self, name, starting_location=None):
         self.health = 150
         self.inventory = []
         self.name = name
@@ -109,7 +115,7 @@ class Katanasword(Weapon):
         self.swing = True
 
 
-none = Katanasword("", 0)
+none = Katanasword("", 100)
 
 
 class Flashlight(Weapon):
@@ -228,7 +234,7 @@ class AudiR8(Car):
         super(AudiR8, self).__init__("Audi R8")
 
 
-R19A = Room("You are in the mansion", "There is an zombie here", None, "parking_lot", None, None, None, None,
+R19A = Room("You are in the mansion", "", None, "parking_lot", None, None, None, None,
             )
 parking_lot = Room("This is the parking lot of the mansion", "There are a few cars parked here", "JOHNS_INCREDIBLE",
                    'R19A', None, None, None,
@@ -271,7 +277,7 @@ Weapon2 = Katanasword("Katana Sword", 100)
 
 MY_ROOM.item.append(Weapon)
 
-Melee_Weapon = Bat("Baseball Bat", 45)
+Melee_Weapon = Bat("Baseball Bat", 50)
 
 Consumable2 = AppleJuice("AppleJuice")
 
@@ -293,21 +299,35 @@ Consumable4 = Soda("Mountain Dew Soda")
 
 GYM.item.append(Consumable4)
 
-zombie = Enemy("Zombie", R19A)
+zombie = Enemy("Bomb Zombie", R19A)
 
-zombie2 = Enemy("Zombie", JOHNS_INCREDIBLE)
+zombie2 = Enemy("Running Zombie", JOHNS_INCREDIBLE)
 
-zombie3 = Enemy("Zombie", DARKROOM)
+zombie3 = Enemy("Legless Zombie", DARKROOM)
 
-zombie4 = Enemy("Zombie", AIRPORT)
+zombie4 = Enemy("Acid Bomb Zombie", AIRPORT)
 
-zombie5 = Enemy("Zombie", COMPUTER_ROOM)
+zombie5 = Enemy("Smart Zombie", COMPUTER_ROOM)
 
-zombie6 = Enemy("Zombie", HALLWAY)
+zombie6 = Enemy("Faceless Zombie", HALLWAY)
 
-zombie7 = Enemy("Zombie", LIVING_ROOM)
+zombie7 = Enemy("Boss Zombie", LIVING_ROOM)
 
-R19A.enemy.append(zombie)
+none2 = Enemy("")
+
+R19A.enemies.append(zombie)
+
+JOHNS_INCREDIBLE.enemies.append(zombie2)
+
+DARKROOM.enemies.append(zombie3)
+
+AIRPORT.enemies.append(zombie4)
+
+COMPUTER_ROOM.enemies.append(zombie5)
+
+HALLWAY.enemies.append(zombie6)
+
+LIVING_ROOM.enemies.append(zombie7)
 
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 shorter_directions = ['n', 's', 'e', 'w', 'u', 'd']
@@ -323,19 +343,49 @@ while playing:
         for item in player.current_location.item:
             print(item.name)
 
-    if len(player.current_location.enemy) > 0:
-        print("There is a following enemy here:")
-        for enemy in player.current_location.enemy:
+    if len(player.current_location.enemies) > 0:
+        print("The following enemies are here:")
+        for enemy in player.current_location.enemies:
             print(enemy.name)
             print()
     command = input(">>")
+    if command in shorter_directions:
+        pos = shorter_directions.index(command)
+        command = directions[pos]
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
+    if 'attack ' in command.lower():
+        targets_name = command[7:]
+
+        target = None
+        for enemies in player.current_location.enemies:
+            print(enemies.name)
+            if enemies.name.lower() == targets_name.lower():
+                target = enemies
+                player.attack(target)
+        if target is not None and target.health <= 0:
+            player.current_location.enemies.remove(target)
     elif command in directions:
         try:
             next_room = player.find_room(command)
             player.move(next_room)
         except KeyError:
             print("I can't go that way.")
-        else:
-            print("Command not recognized.")
+
+    elif "grab " in command.lower():
+        if player.current_location.item is not None:
+            item_name = command[5:]
+            item_found = None
+            for items in player.current_location.item:
+                if items.name.lower() == item_name.lower():
+                    item_found = items
+                    if item_found is not None:
+                        try:
+                            item_found.grab()
+                            player.current_location.item.remove(item_found)
+                            print()
+                        except AttributeError:
+                            print("I can't grab this")
+
+    else:
+        print("Command not recognized.")
